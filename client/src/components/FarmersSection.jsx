@@ -21,9 +21,9 @@ const FarmersSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">
-            The <span className="text-yellow-500">Hands</span> That Nurture!
+            The <span className="text-yellow-500">Hands</span> That Nature!
           </h2>
-          <p className="mt-6 text-gray-700 text-base sm:text-lg leading-relaxed">
+          <p className="mt-7 text-gray-700 text-base sm:text-lg leading-relaxed">
             Meet the faces behind the purity! Our farmers are committed to ethical and 
             sustainable dairy farming, ensuring that every glass of milk is as fresh as nature intended.
           </p>

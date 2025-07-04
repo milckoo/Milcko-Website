@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 
 // Pages
 import Home from './pages/Home';
+import Contactus from './pages/Contactus';
 import Products from './pages/Products';
 import TrialPack from './pages/TrialPack';
 import FAQs from './pages/FAQs';
@@ -18,6 +19,7 @@ function App() {
       {/* Routes for different pages */}
       <Routes>
         <Route path="/" element={<Home />} />
+         <Route path="/Contactus" element={<Contactus />} />
         <Route path="/products" element={<Products />} />
         <Route path="/trial-pack" element={<TrialPack />} />
         <Route path="/faqs" element={<FAQs />} />
