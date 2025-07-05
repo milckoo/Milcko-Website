@@ -10,7 +10,7 @@ const FarmersSection = () => {
   const isImageInView = useInView(imageRef, { once: false });
 
   return (
-    <div className="w-full bg-white py-20 px-6 pt-50 sm:px-10 md:px-20 lg:px-32 min-h-screen">
+    <div className="w-full bg-[#fefcf8] py-20 px-6 pt-50 sm:px-10 md:px-20 lg:px-32 min-h-screen">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
         {/* Left: Text Content */}
         <motion.div

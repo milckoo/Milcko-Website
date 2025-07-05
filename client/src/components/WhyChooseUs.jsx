@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
   const isInView = useInView(sectionRef, { once: false });
 
   return (
-    <div className="w-full bg-white  sm:px-10 md:px-16 lg:px-28">
+    <div className="w-fullbg bg-[#fefcf8] sm:px-10 md:px-16 lg:px-28">
       <div
         ref={sectionRef}
         className="flex flex-col lg:flex-row items-center justify-between gap-16"

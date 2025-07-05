@@ -75,7 +75,7 @@ const StatsSection = () => {
   return (
     <section
       ref={ref}
-      className="relative bg-white py-20 px-6 md:px-12 lg:px-24 overflow-hidden"
+      className="relative bg-[#fefcf8] py-20 px-6 md:px-12 lg:px-24 overflow-hidden"
     >
       {/* 🌄 Background container below all */}
       <div className="absolute inset-x-0 bottom-19 w-full z-0 pointer-events-none">

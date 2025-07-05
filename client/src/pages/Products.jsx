@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Products = () => {
   return (
-    <div className="flex flex-col pt-10  min-h-screen w-full">
+    <div className="flex flex-col pt-10  bg-[#fefcf8] min-h-screen w-full">
       {/* Hero Section with Background Image */}
    <div
   className="relative bg-cover bg-center bg-no-repeat min-h-screen   flex items-start justify-center pt-24"
