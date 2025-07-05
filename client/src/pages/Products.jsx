@@ -46,8 +46,9 @@ const Products = () => {
       {/* Spacer before Footer */}
       <div className="h-20 bg-[#fefcf8]"></div>
 
-      {/* Footer */}
-      <Footer />
+    
+    <div className=" w-screen"> <Footer /></div>  {/* Footer */}
+
     </div>
   );
 };
