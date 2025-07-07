@@ -26,9 +26,9 @@ const Products = () => {
       </div>
 
 
-      <div className="w-full">
+    
         <Footer />
-      </div>
+     
     </div>
   );
 };

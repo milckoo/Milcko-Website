@@ -44,7 +44,7 @@ const Contactus = () => {
   };
 
   return (
-    <div className="pt-32 mt-10 bg-[#fefcf8] min-h-screen px-6 sm:px-10 overflow-x-hidden">
+    <div className="pt-32 mt-10 bg-[#fefcf8] min-h-screen px-6 sm:px-0 overflow-x-hidden">
       <div className="text-center mb-10">
         <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
           Fresh <span className="text-green-600">Support</span>, Just Like Our <span className="text-yellow-500">Milk!</span>
