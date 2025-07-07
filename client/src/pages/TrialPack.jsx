@@ -180,7 +180,7 @@ const TrialPack = () => {
         </div>
       </div>
 
-      {/* Footer */}
+      
       <Footer />
     </div>
   );

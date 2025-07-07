@@ -24,24 +24,17 @@ const AboutUs = () => {
 
         {/* Text Content */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="relative z-10 max-w-4xl"
         >
-          <h1 className="text-4xl pt-90 md:text-5xl font-bold text-gray-900 mb-4">
-            About <span className="text-yellow-500">Us</span>
-          </h1>
-          <p className="text-base sm:text-lg text-gray-800 mb-6 font-medium leading-relaxed">
-            We're not just another dairy brand. At <span className="font-semibold">MILCKO</span>, we deliver fresh A2 Cow and Buffalo milk within an hour of milking — 
-            directly from our farms to your doorstep. Our milk comes bottled in eco-friendly glass, never plastic, and without 
-            a single additive. It’s a promise of purity, speed, and sustainability.
-          </p>
+          
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.00 }}
+            whileTap={{ scale: 1.00 }}
             onClick={() => navigate('/trial-pack')}
-            className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full shadow-md transition"
+            className="bg-yellow-400 hover:bg-yellow-500 mt-175  text-black font-semibold px-15 py-4 rounded-full shadow-md transition"
           >
             Claim Your Trial Pack
           </motion.button>
@@ -53,7 +46,7 @@ const AboutUs = () => {
         
 <SubscribeSave />
 
-<div className=' mt-20'><Footer /> </div>
+<Footer /> 
       
     </div>
   );

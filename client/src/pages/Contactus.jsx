@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import supportImage from '../assets/images/contactusbg.png';
 
-
 const Contactus = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -24,13 +23,11 @@ const Contactus = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic validation
     if (!formData.firstName || !formData.email || !formData.message) {
       alert('Please fill in at least First Name, Email, and Message.');
       return;
     }
 
-    // Store in localStorage
     const submissions = JSON.parse(localStorage.getItem('contactSubmissions')) || [];
     submissions.push(formData);
     localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
@@ -47,21 +44,18 @@ const Contactus = () => {
   };
 
   return (
-    <div className="pt-32 mt-10 bg-[#fefcf8] min-h-screen px-6 sm:px-10">
-      {/* Centered Heading at Top */}
+    <div className="pt-32 mt-10 bg-[#fefcf8] min-h-screen px-6 sm:px-10 overflow-x-hidden">
       <div className="text-center mb-10">
         <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
           Fresh <span className="text-green-600">Support</span>, Just Like Our <span className="text-yellow-500">Milk!</span>
         </h1>
-        <p className="text-gray-700 mt-2 text-2xl ">
+        <p className="text-gray-700 mt-2 text-2xl">
           For any inquiries or assistance, connect with us directly—we’re here to provide the support you need.
         </p>
       </div>
 
-      {/* Main Section */}
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10 max-w-7xl mx-auto">
-        {/* Left Side - Form */}
-        <div className="bg-white w-full max-w-md p-8  shadow-2xs shadow-yellow-400 rounded-xl border">
+        <div className="bg-white w-full max-w-md p-8 shadow-2xs shadow-yellow-400 rounded-xl border">
           <h2 className="text-xl font-semibold mb-4 text-gray-800">Get in Touch!</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="flex gap-4">
@@ -123,26 +117,22 @@ const Contactus = () => {
             >
               Submit
             </button>
-            <p className="text-xs text-center  text-gray-500 mt-2">
+            <p className="text-xs text-center text-gray-500 mt-2">
               By submitting, you agree to our <strong>Terms & Conditions</strong> and <strong>Privacy Policy</strong>.
             </p>
           </form>
         </div>
-{/* Right Side - Full Height and Bigger Image */}
-<div className="w-full pt-10 h-full flex items-center justify-center">
-  <img
-    src={supportImage}
-    alt="Support Illustration"
-    className="w-full h-full object-cover   min-h-[450px] max-w-[900px]"
-  />
-</div>
 
-      
-
+        <div className="w-full pt-10 h-full flex items-center justify-center">
+          <img
+            src={supportImage}
+            alt="Support Illustration"
+            className="w-full h-full object-cover min-h-[450px] max-w-[900px]"
+          />
+        </div>
       </div>
 
-      {/* Footer */}
-      <div className="bg-gray-100 mt-10 px-8 py-4 text-sm  flex gap-10 items-center text-center  text-gray-700 rounded-md">
+      <div className="w-full ml-12 mb-30 px-8 py-4 text-sm flex flex-col sm:flex-row  items-center text-gray-700 rounded-md gap-35 pb-10">
         <div>
           📧 <a href="mailto:milckofficial@gmail.com" className="underline">milckofficial@gmail.com</a>
         </div>
@@ -150,13 +140,10 @@ const Contactus = () => {
           📞 <a href="tel:+917567618996" className="underline">+91 75676 18196</a>
         </div>
       </div>
-        <Footer />
-    
+
+      <Footer/>
     </div>
- 
   );
 };
-
-   
 
 export default Contactus;
