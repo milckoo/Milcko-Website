@@ -14,17 +14,18 @@ const Navbar = () => {
     { name: 'Trial Pack', path: '/trial-pack' },
     { name: 'FAQs', path: '/faqs' },
     { name: 'About Us', path: '/about-us' }
+    
   ];
 
-  // Detect page location
-  const grayBgPaths = ['/contactus', '/products', '/faqs', '/trial-pack', '/about-us'];
+  
+  const grayBgPaths = ['/contactus', '/products', '/faqs', '/trial-pack', '/about-us' ,'/our-farmers'];
   const isGrayBackground = grayBgPaths.includes(location.pathname);
   const isHome = location.pathname === '/';
 
   return (
     <nav className={`absolute top-0 left-0 w-full z-50 transition-all  px-5 sm:px-12 duration-300 ${isGrayBackground ? 'bg-gray-700' : 'bg-transparent'}`}>
       <div className={`flex justify-between mr-20 ml-20 items-center px-5 sm:px-12 ${isHome ? 'py-5' : 'py-2'}`}>
-        {/* Logo */}
+        
         <Link to="/" className="flex items-center">
           <motion.img
             src={milckoLogo}
@@ -36,7 +37,6 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop Nav */}
         <ul className="hidden md:flex gap-10 text-white font-semibold text-base">
           {navItems.map((item) => (
             <li key={item.name}>
@@ -54,7 +54,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Hamburger Button */}
+        
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -69,7 +69,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      
       <AnimatePresence>
         {isOpen && (
           <motion.div

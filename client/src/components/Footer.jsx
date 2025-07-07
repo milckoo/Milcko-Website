@@ -1,4 +1,6 @@
 import React from "react";
+
+import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import {
   FaFacebookF,
@@ -62,7 +64,7 @@ const Footer = () => {
           </div>
         </motion.div>
 
-        {/* Company */}
+      
         <motion.div
           className="flex flex-col mt-20 items-center"
           variants={fadeUp}
@@ -72,7 +74,11 @@ const Footer = () => {
           <ul className="space-y-2 text-gray-300">
             {[
               "About Us",
-              "Our Farmers",
+             <Link
+          to="/our-farmers"
+        >
+          Our Farmers
+        </Link>,
               "Our Process",
               "Sustainability",
               "Careers",
