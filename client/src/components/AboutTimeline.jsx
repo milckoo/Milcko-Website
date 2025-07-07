@@ -69,15 +69,15 @@ const AboutTimeline = () => {
           {/* Arrows */}
           <button
             onClick={goPrev}
-            className="absolute top-1/2 left-0 transform -translate-y-1/2  rounded-full shadow p-2 hover:bg-gray-200"
+            className="absolute top-1/2 left-8 transform -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-gray-200"
           >
-            
+            ◀
           </button>
           <button
             onClick={goNext}
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 text-9xl rounded-full shadow p-2 hover:bg-gray-200"
+            className="absolute top-1/2 right-9 transform -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-gray-200"
           >
-            
+            ▶
           </button>
         </div>
       </div>
