@@ -12,6 +12,7 @@ import AboutUs from './pages/AboutUs';
 import OurFarmers from './pages/OurFarmers'; 
 import OurProcess from './pages/OurProcess';
 import SustainabilitySection from './pages/SustainabilitySection';
+import CareersSection from "./components/CareersSection";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/our-farmers" element={<OurFarmers />} />
         <Route path="/our-process" element={<OurProcess />} />
          <Route path="/sustainability" element={<SustainabilitySection />} />
+         <Route path="/careers" element={<CareersSection />} />
       </Routes>
     </>
   );

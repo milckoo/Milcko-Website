@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   FaFacebookF,
@@ -21,7 +21,6 @@ const fadeUp = {
 const Footer = () => {
   return (
     <footer className="relative bg-[#121212] text-white py-1 px-6 md:px-12 overflow-hidden text-sm">
-      
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
         <img
           src={footerBg}
@@ -38,7 +37,6 @@ const Footer = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-       
         <motion.div
           className="flex flex-col items-center"
           variants={fadeUp}
@@ -53,18 +51,21 @@ const Footer = () => {
             Sip the goodness of the nature.
           </p>
           <div className="flex gap-4 text-orange-500 text-base">
-            {[FaFacebookF, FaLinkedinIn, FaInstagram, FaXTwitter, FaYoutube].map(
-              (Icon, i) => (
-                <Icon
-                  key={i}
-                  className="hover:text-yellow-400 transition-transform duration-300 hover:scale-110 cursor-pointer"
-                />
-              )
-            )}
+            {[
+              FaFacebookF,
+              FaLinkedinIn,
+              FaInstagram,
+              FaXTwitter,
+              FaYoutube,
+            ].map((Icon, i) => (
+              <Icon
+                key={i}
+                className="hover:text-yellow-400 transition-transform duration-300 hover:scale-110 cursor-pointer"
+              />
+            ))}
           </div>
         </motion.div>
 
-      
         <motion.div
           className="flex flex-col mt-20 items-center"
           variants={fadeUp}
@@ -74,16 +75,10 @@ const Footer = () => {
           <ul className="space-y-2 text-gray-300">
             {[
               "About Us",
-             <Link
-          to="/our-farmers"
-        >
-          Our Farmers
-        </Link>,
-            <Link to="/our-process">Our Process</Link>,
-              <Link to="/sustainability">
-  <button >Sustainability</button>
-</Link>,
-              "Careers",
+              <Link to="/our-farmers">Our Farmers</Link>,
+              <Link to="/our-process">Our Process</Link>,
+              <Link to="/sustainability">Sustainability</Link>,
+             <Link to="/careers">Careers</Link>,
               "Testimonials",
             ].map((item, i) => (
               <li
@@ -184,12 +179,10 @@ const Footer = () => {
             </a>
             <br />
             <br />
-               <a
+            <a
               href="mailto:milckoofficial@gmail.com"
               className=" hover:text-yellow-400"
-            >
-             
-            </a>
+            ></a>
           </p>
         </motion.div>
       </motion.div>
@@ -202,10 +195,8 @@ const Footer = () => {
         transition={{ delay: 0.5, duration: 0.6 }}
       >
         © 2025 Milcko | Pure. Fresh. Delivered with Care. All Rights Reserved.
-
-       
       </motion.div>
-       <div className=" pb-10 pl-281">  Made By : Ayush Bunkar</div>
+      <div className=" pb-10 pl-281"> Made By : Ayush Bunkar</div>
     </footer>
   );
 };

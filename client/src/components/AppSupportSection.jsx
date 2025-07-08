@@ -12,7 +12,7 @@ const AppSupportSection = () => {
         </p>
       </div>
 
-      {/* ✅ Image Display */}
+      
       <div className="flex  justify-center">
         <img
           src={fairPayImg}

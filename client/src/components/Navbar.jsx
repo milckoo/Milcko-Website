@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   
-  const grayBgPaths = ['/contactus', '/products', '/faqs', '/trial-pack', '/about-us' ,'/our-farmers','/our-process',"/sustainability"];
+  const grayBgPaths = ['/contactus', '/products', '/faqs', '/trial-pack', '/about-us' ,'/our-farmers','/our-process',"/sustainability","/careers"];
   const isGrayBackground = grayBgPaths.includes(location.pathname);
   const isHome = location.pathname === '/';
 

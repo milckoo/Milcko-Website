@@ -3,18 +3,20 @@ import sustainabilityImage from "../assets/images/sustainability.png";
 import PromiseTop from "../components/PromiseTop"; 
 import JourneySection from '../components/JourneySection';
 import ImpactSection from '../components/ImpactSection';
+import JoinGreenMovement from "../components/JoinGreenMovement";
+import Footer from '../components/Footer';
 
 const SustainabilitySection = () => {
   return (
     <>
       {/* Sustainability Banner Section */}
       <section
-        className="relative w-full h-250  mt-18 bg-cover bg-center flex items-center justify-center"
+        className="relative w-full h-250   mt-18 bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage: `url(${sustainabilityImage})`,
         }}
       >
-        <div className="absolute inset-0  bg-opacity-50 z-0" />
+        <div className="absolute inset-0  bg-black/35 bg-opacity-50 z-0" />
         <div className="relative z-10 max-w-4xl text-center px-4 text-white">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
             <span className="text-orange-400">Sustainability</span> is Not a Choice.<br />
@@ -37,6 +39,8 @@ const SustainabilitySection = () => {
       <PromiseTop />
       <JourneySection />
       <ImpactSection />
+       <JoinGreenMovement />
+       <Footer/>
     </>
   );
 };
