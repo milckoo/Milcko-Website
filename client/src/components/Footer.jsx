@@ -79,8 +79,10 @@ const Footer = () => {
         >
           Our Farmers
         </Link>,
-              "Our Process",
-              "Sustainability",
+            <Link to="/our-process">Our Process</Link>,
+              <Link to="/sustainability">
+  <button >Sustainability</button>
+</Link>,
               "Careers",
               "Testimonials",
             ].map((item, i) => (

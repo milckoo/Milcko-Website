@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
-// Pages
+
 import Home from './pages/Home';
 import Contactus from './pages/Contactus';
 import Products from './pages/Products';
@@ -10,6 +10,8 @@ import TrialPack from './pages/TrialPack';
 import FAQs from './pages/FAQs';
 import AboutUs from './pages/AboutUs';
 import OurFarmers from './pages/OurFarmers'; 
+import OurProcess from './pages/OurProcess';
+import SustainabilitySection from './pages/SustainabilitySection';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/faqs" element={<FAQs />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/our-farmers" element={<OurFarmers />} />
+        <Route path="/our-process" element={<OurProcess />} />
+         <Route path="/sustainability" element={<SustainabilitySection />} />
       </Routes>
     </>
   );

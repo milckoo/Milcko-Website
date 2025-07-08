@@ -4,12 +4,14 @@ import greenbg from '../assets/images/greenbg.jpg';
 import AppSupportSection from '../components/AppSupportSection'; 
 import FarmerOnboarding from '../components/FarmerOnboarding';
 import FarmerPhotoWall from '../components/FarmerPhotoWall';
+import Footer from '../components/Footer';
+
 
 const OurFarmers = () => {
   return (
     <section
       id="our-farmers"
-      className="w-full min-h-screen bg-cover bg-center bg-no-repeat py-24 px-6 sm:px-12"
+      className="w-full min-h-screen bg-cover bg-center bg-no-repeat py-0 px-0"
       style={{ backgroundImage: `url(${greenbg})` }}
     >
       <div className="max-w-7xl mt-20 mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
@@ -38,6 +40,7 @@ const OurFarmers = () => {
       <AppSupportSection />
        <FarmerOnboarding />
        <FarmerPhotoWall />
+       <Footer/>
     </section>
   );
 };
