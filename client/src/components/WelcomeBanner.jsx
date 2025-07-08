@@ -6,7 +6,6 @@ const WelcomeBanner = () => {
     <section className="bg-[#fff0d9] px-6 py-16">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         
-        {/* Left: Image */}
         <div className="w-full lg:w-1/3">
           <img
             src={welcomeImg}
@@ -15,7 +14,7 @@ const WelcomeBanner = () => {
           />
         </div>
 
-        {/* Right: Text */}
+       
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
             Shape the <span className="text-yellow-500">Future</span> with Us.
