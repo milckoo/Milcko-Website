@@ -1,17 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import bgImage from '../assets/images/herobg.png';
+import videoFile from '../assets/herosection.mp4';
 
 const Hero = () => {
   return (
-    <div
-      className="relative h-screen w-full bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/40 bg-opacity-60"></div>
+    <div className="relative h-screen w-full overflow-hidden">
+      {/* 🎥 Background Video */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src={videoFile}
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
 
-      {/* Hero Content */}
+      {/* 🖤 Dark Overlay */}
+      <div className="absolute inset-0 bg-black/40 backdrop-brightness-50"></div>
+
+      {/* 📝 Content */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -25,7 +32,7 @@ const Hero = () => {
           Straight from the Farm to your <span className="text-yellow-400">Doorstep!</span>
         </h2>
 
-        {/* Store Buttons */}
+        {/* 📲 Store Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mt-6">
           <motion.img
             src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
