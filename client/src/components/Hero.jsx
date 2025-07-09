@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import videoFile from '../assets/herosection.mp4';
+import milkDrop from '../assets/images/milkdrop.png';
 
 const Hero = () => {
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      {/* 🎥 Background Video */}
+    
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         src={videoFile}
@@ -15,19 +16,31 @@ const Hero = () => {
         playsInline
       />
 
-      {/* 🖤 Dark Overlay */}
-      <div className="absolute inset-0 bg-black/40 backdrop-brightness-50"></div>
+   
+      <div className="absolute inset-0 bg-black/4 backdrop-brightness-50"></div>
 
-      {/* 📝 Content */}
+  
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 sm:px-8"
       >
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 drop-shadow-md">
-          Pure. Fresh.
-        </h1>
+     <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 drop-shadow-md flex items-center gap-1">
+  Pure
+  <img
+    src={milkDrop}
+    alt="Milk Drop"
+    className="w-3 sm:w-4 h-auto inline-block mt-6"
+  />
+  Fresh
+  <img
+    src={milkDrop}
+    alt="Milk Drop"
+    className="w-3 sm:w-4 h-auto inline-block mt-6"
+  />
+</h1>
+
         <h2 className="text-xl sm:text-2xl font-semibold text-white drop-shadow-md">
           Straight from the Farm to your <span className="text-yellow-400">Doorstep!</span>
         </h2>

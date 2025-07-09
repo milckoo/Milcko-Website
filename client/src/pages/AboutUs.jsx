@@ -14,7 +14,7 @@ const AboutUs = () => {
 
   return (
     <div className="bg-[#fefcf8] min-h-screen flex flex-col justify-between">
-      {/* Hero Section with Background Image */}
+      
       <div
         className="w-full bg-cover bg-center min-h-[110vh] flex flex-col items-center justify-center text-center px-6"
         style={{ backgroundImage: `url(${bgImage})` }}

@@ -55,6 +55,7 @@ const Contactus = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10 max-w-7xl mx-auto">
+        {/* Contact Form */}
         <div className="bg-white w-full max-w-md p-8 shadow-2xs shadow-yellow-400 rounded-xl border">
           <h2 className="text-xl font-semibold mb-4 text-gray-800">Get in Touch!</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
@@ -123,6 +124,7 @@ const Contactus = () => {
           </form>
         </div>
 
+        {/* Support Image */}
         <div className="w-full pt-10 h-full flex items-center justify-center">
           <img
             src={supportImage}
@@ -132,7 +134,8 @@ const Contactus = () => {
         </div>
       </div>
 
-      <div className="w-full ml-12 mb-30 px-8 py-4 text-sm flex flex-col sm:flex-row  items-center text-gray-700 rounded-md gap-35 pb-10">
+      {/* Contact Info */}
+      <div className="w-full px-0 py-0 text-sm flex flex-col sm:flex-row pl-40 text-gray-700 gap-6 mb-6">
         <div>
           📧 <a href="mailto:milckofficial@gmail.com" className="underline">milckofficial@gmail.com</a>
         </div>
@@ -141,7 +144,7 @@ const Contactus = () => {
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };

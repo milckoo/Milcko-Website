@@ -75,9 +75,9 @@ const StatsSection = () => {
   return (
     <section
       ref={ref}
-      className="relative bg-[#fefcf8] py-20 px-6 md:px-12 lg:px-24 overflow-hidden"
+      className="relative bg-[#fefcf8] py-0 px-6 d:px-12 lg:px-24 overflow-hidden"
     >
-      {/* 🌄 Background container below all */}
+      
       <div className="absolute inset-x-0 bottom-19 w-full z-0 pointer-events-none">
         <img
           src={milkWaveBg}
@@ -91,9 +91,9 @@ const StatsSection = () => {
         />
       </div>
 
-      {/* ✅ Foreground content */}
+  
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
-        {/* 👈 Left image */}
+        
         <motion.div
           className="w-full lg:w-[40%] flex justify-center"
           initial="hidden"
@@ -103,11 +103,10 @@ const StatsSection = () => {
           <img
             src={farmerCowsImg}
             alt="Farmer and cows"
-            className="w-[85%] rounded-xl shadow-md object-cover"
+            className="w-[85%] rounded-xl  object-cover"
           />
         </motion.div>
 
-        {/* 👉 Stats content */}
         <motion.div
           className="w-full lg:w-[60%] text-left"
           initial="hidden"

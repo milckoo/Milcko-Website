@@ -23,7 +23,7 @@ const Navbar = () => {
   const isHome = location.pathname === '/';
 
   return (
-    <nav className={`absolute top-0 left-0 w-full z-50 transition-all  px-5 sm:px-12 duration-300 ${isGrayBackground ? 'bg-gray-700' : 'bg-transparent'}`}>
+    <nav className={`absolute top-0 left-0 w-full z-50 transition-all  px-5 sm:px-12 duration-300 ${isGrayBackground ? 'bg-[#373737]' : 'bg-transparent'}`}>
       <div className={`flex justify-between mr-20 ml-20 items-center px-5 sm:px-12 ${isHome ? 'py-5' : 'py-2'}`}>
         
         <Link to="/" className="flex items-center">
