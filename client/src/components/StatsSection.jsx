@@ -106,7 +106,7 @@ const StatsSection = () => {
             className="w-[85%] rounded-xl  object-cover"
           />
         </motion.div>
-
+{/* cvbn m, */}
         <motion.div
           className="w-full lg:w-[60%] text-left"
           initial="hidden"
