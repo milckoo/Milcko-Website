@@ -18,8 +18,17 @@ const Navbar = () => {
     { name: 'FAQs', path: '/faqs' },
     { name: 'About Us', path: '/about-us' }
   ];
+
+  // Add additional nav items with grey background
+  const additionalNavItems = [
+    { name: 'Testimonials', path: '/testimonials' },
+    { name: 'Delivery Areas', path: '/delivery-areas' },
+    { name: 'Return & Refund', path: '/return-policy' },
+    { name: 'Terms & Conditions', path: '/terms-conditions' },
+    { name: 'Privacy Policy', path: '/privacy-policy' }
+  ];
   
-  // Add login and register to the grayBgPaths array
+  // Add all paths to grayBgPaths
   const grayBgPaths = [
     '/contactus', 
     '/products', 
@@ -30,8 +39,17 @@ const Navbar = () => {
     '/our-process',
     '/sustainability',
     '/careers',
-    '/login',       // Added login path
-    '/register'     // Added register path
+    '/login',
+    '/register',
+    '/testimonials',
+    '/delivery-areas',
+    '/return-policy',
+    '/terms-conditions',
+    '/privacy-policy',
+    '/cart',              // Add cart page
+    '/checkout',          // Add checkout page if you have one
+    '/order-summary',     // Add order summary page if you have one
+    '/my-orders'          // Add orders page if you have one
   ];
   
   const isGrayBackground = grayBgPaths.includes(location.pathname);
@@ -68,6 +86,29 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+          </ul>
+
+          {/* Additional nav items with grey background - Desktop */}
+          <ul className="hidden md:flex ml-4">
+            <li className="relative group">
+              <button className="flex items-center px-3 py-2 text-white hover:text-yellow-400">
+                More
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="absolute right-0 z-50 hidden group-hover:block w-48 py-2 mt-1 bg-gray-900 rounded-md shadow-lg">
+                {additionalNavItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    className="block px-4 py-2 text-sm text-gray-300 bg-gray-800 hover:text-yellow-400 my-1 mx-2 rounded"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </li>
           </ul>
 
           {/* Authentication buttons */}
@@ -169,6 +210,21 @@ const Navbar = () => {
                   </Link>
                 </>
               )}
+            </div>
+
+            {/* Additional links in the mobile menu */}
+            <div className="pt-4 border-t border-gray-700">
+              <h3 className="px-2 py-2 text-sm font-medium text-gray-400">More Pages</h3>
+              {additionalNavItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="block bg-gray-800 px-3 py-1.5 rounded text-gray-300 hover:text-yellow-400 my-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </motion.div>
         )}

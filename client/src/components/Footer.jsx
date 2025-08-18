@@ -53,18 +53,18 @@ const Footer = () => {
           <h3 className="font-semibold text-base mt-10 text-white mb-4">Company</h3>
           <ul className="space-y-2 text-gray-300">
             {[
-              "About Us",
-              <Link to="/our-farmers" className="hover:text-yellow-400">Our Farmers</Link>,
-              <Link to="/our-process" className="hover:text-yellow-400">Our Process</Link>,
-              <Link to="/sustainability" className="hover:text-yellow-400">Sustainability</Link>,
-              <Link to="/careers" className="hover:text-yellow-400">Careers</Link>,
-              "Testimonials",
+              <Link to="/about-us" className="text-gray-300 hover:text-yellow-400">About Us</Link>,
+              <Link to="/our-farmers" className="text-gray-300 hover:text-yellow-400">Our Farmers</Link>,
+              <Link to="/our-process" className="text-gray-300 hover:text-yellow-400">Our Process</Link>,
+              <Link to="/sustainability" className="text-gray-300 hover:text-yellow-400">Sustainability</Link>,
+              <Link to="/careers" className="text-gray-300 hover:text-yellow-400">Careers</Link>,
+              <Link to="/testimonials" className="text-gray-300 hover:text-yellow-400">Testimonials</Link>,
             ].map((item, i) => (
               <li
                 key={i}
-                className="transition duration-300 cursor-pointer hover:text-yellow-400"
+                className="transition duration-300 cursor-pointer"
               >
-                {typeof item === "string" ? item : item}
+                {item}
               </li>
             ))}
           </ul>
@@ -75,16 +75,16 @@ const Footer = () => {
           <h3 className="font-semibold text-base mt-10 text-white mb-4">Support</h3>
           <ul className="space-y-2 text-gray-300">
             {[
-              "FAQs",
-              "Contact Us",
-              "Delivery Areas",
-              "Return & Refund Policy",
-              "Terms & Conditions",
-              "Privacy Policy",
+              <Link to="/faqs" className="text-gray-300 hover:text-yellow-400">FAQs</Link>,
+              <Link to="/contactus" className="text-gray-300 hover:text-yellow-400">Contact Us</Link>,
+              <Link to="/delivery-areas" className="text-gray-300 hover:text-yellow-400">Delivery Areas</Link>,
+              <Link to="/return-policy" className="text-gray-300 hover:text-yellow-400">Return & Refund Policy</Link>,
+              <Link to="/terms-conditions" className="text-gray-300 hover:text-yellow-400">Terms & Conditions</Link>,
+              <Link to="/privacy-policy" className="text-gray-300 hover:text-yellow-400">Privacy Policy</Link>,
             ].map((item, i) => (
               <li
                 key={i}
-                className="transition duration-300 cursor-pointer hover:text-yellow-400"
+                className="transition duration-300 cursor-pointer"
               >
                 {item}
               </li>
@@ -138,14 +138,14 @@ const Footer = () => {
               <br />
               <a
                 href="mailto:milckoofficial@gmail.com"
-                className="underline hover:text-yellow-400"
+                className="underline text-gray-300 hover:text-yellow-400"
               >
                 milckoofficial@gmail.com
               </a>
               <br />
               <a
                 href="tel:+917387018156"
-                className="underline hover:text-yellow-400"
+                className="underline text-gray-300 hover:text-yellow-400"
               >
                 +91 73870 18156
               </a>

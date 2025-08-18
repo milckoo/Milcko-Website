@@ -17,8 +17,9 @@ import Products from './pages/Products';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import OrderConfirmation from './pages/OrderConfirmation';
+import ReturnRefundPolicy from './pages/ReturnRefundPolicy';
 
-// Import your existing pages - no placeholders needed
+// Other public pages
 import AboutUs from './pages/AboutUs';
 import TrialPack from './pages/TrialPack';
 import FAQs from './pages/FAQs';
@@ -26,6 +27,10 @@ import OurFarmers from './pages/OurFarmers';
 import OurProcess from './pages/OurProcess';
 import Sustainability from './pages/Sustainability';
 import Careers from './pages/Careers';
+import Testimonials from './pages/Testimonials';
+import DeliveryAreas from './pages/DeliveryAreas';
+import TermsConditions from './pages/TermsConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 // Dashboard Pages
 import Dashboard from './pages/Dashboard/Dashboard';
@@ -135,6 +140,51 @@ const App = () => {
               <>
                 <Navbar />
                 <Careers />
+              </>
+            }
+          />
+          <Route
+            path="/testimonials"
+            element={
+              <>
+                <Navbar />
+                <Testimonials />
+              </>
+            }
+          />
+          <Route
+            path="/delivery-areas"
+            element={
+              <>
+                <Navbar />
+                <DeliveryAreas />
+              </>
+            }
+          />
+          <Route
+            path="/terms-conditions"
+            element={
+              <>
+                <Navbar />
+                <TermsConditions />
+              </>
+            }
+          />
+          <Route
+            path="/privacy-policy"
+            element={
+              <>
+                <Navbar />
+                <PrivacyPolicy />
+              </>
+            }
+          />
+          <Route
+            path="/return-policy"
+            element={
+              <>
+                <Navbar />
+                <ReturnRefundPolicy />
               </>
             }
           />

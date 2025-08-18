@@ -292,6 +292,39 @@ const Cart = () => {
             </div>
           </div>
         </div>
+
+        <div className="mt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-4 md:mb-0">
+            <Link to="/products" className="text-green-700 hover:text-green-800">
+              ← Continue Shopping
+            </Link>
+          </div>
+          
+          <div className="flex flex-col w-full md:w-auto">
+            <div className="bg-gray-100 p-4 rounded-lg mb-4">
+              <div className="flex justify-between mb-2">
+                <span>Subtotal:</span>
+                <span className="font-bold">₹{subtotal.toFixed(2)}</span>
+              </div>
+              <div className="flex justify-between mb-2">
+                <span>Delivery Fee:</span>
+                <span>{shipping > 0 ? `₹${shipping.toFixed(2)}` : 'Free'}</span>
+              </div>
+              <div className="flex justify-between text-lg font-bold">
+                <span>Total:</span>
+                <span>₹{(subtotal + shipping).toFixed(2)}</span>
+              </div>
+            </div>
+            
+            <button 
+              onClick={() => navigate('/checkout')}
+              className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-md w-full"
+              disabled={cartItems.length === 0}
+            >
+              Proceed to Checkout
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
