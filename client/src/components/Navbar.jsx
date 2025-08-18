@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { motion, AnimatePresence } from 'framer-motion';
+import { AuthContext } from '../contexts/AuthContext';
 import milckoLogo from '../assets/logos/milcko.png';
+import NavbarCartIcon from './NavbarCartIcon';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { currentUser, isAuthenticated, logout } = useContext(AuthContext);
   const location = useLocation();
 
   const navItems = [
@@ -14,11 +17,23 @@ const Navbar = () => {
     { name: 'Trial Pack', path: '/trial-pack' },
     { name: 'FAQs', path: '/faqs' },
     { name: 'About Us', path: '/about-us' }
-    
   ];
-
   
-  const grayBgPaths = ['/contactus', '/products', '/faqs', '/trial-pack', '/about-us' ,'/our-farmers','/our-process',"/sustainability","/careers"];
+  // Add login and register to the grayBgPaths array
+  const grayBgPaths = [
+    '/contactus', 
+    '/products', 
+    '/faqs', 
+    '/trial-pack', 
+    '/about-us',
+    '/our-farmers',
+    '/our-process',
+    '/sustainability',
+    '/careers',
+    '/login',       // Added login path
+    '/register'     // Added register path
+  ];
+  
   const isGrayBackground = grayBgPaths.includes(location.pathname);
   const isHome = location.pathname === '/';
 
@@ -37,23 +52,54 @@ const Navbar = () => {
           />
         </Link>
 
-        <ul className="hidden md:flex gap-10 text-white font-semibold text-base">
-          {navItems.map((item) => (
-            <li key={item.name}>
-              <Link
-                to={item.path}
-                className={`px-3 py-2 rounded-md transition-colors duration-200 ${
-                  location.pathname === item.path
-                    ? 'text-yellow-400'
-                    : 'hover:text-yellow-400'
-                }`}
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center">
+          <ul className="hidden md:flex gap-10 text-white font-semibold text-base">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <Link
+                  to={item.path}
+                  className={`px-3 py-2 rounded-md transition-colors duration-200 ${
+                    location.pathname === item.path
+                      ? 'text-yellow-400'
+                      : 'hover:text-yellow-400'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
+          {/* Authentication buttons */}
+          <div className="hidden md:flex ml-6 gap-4">
+            <NavbarCartIcon />
+            {isAuthenticated ? (
+              <>
+                <Link
+                  to="/dashboard"
+                  className="px-4 py-2 rounded-md bg-yellow-400 text-black font-medium hover:bg-yellow-500 transition-colors"
+                >
+                  Dashboard
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  className="px-4 py-2 rounded-md border border-white text-white hover:bg-white hover:text-black transition-colors"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/register"
+                  className="px-4 py-2 rounded-md bg-yellow-400 text-black font-medium hover:bg-yellow-500 transition-colors"
+                >
+                  Register
+                </Link>
+              </>
+            )}
+          </div>
+        </div>
         
         <div className="md:hidden">
           <button
@@ -90,6 +136,40 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Mobile authentication menu items */}
+            <div className="pt-4 border-t border-gray-700">
+              {isAuthenticated ? (
+                <>
+                  <Link
+                    to="/dashboard"
+                    className="block px-2 py-2 text-base hover:text-yellow-400 transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Dashboard
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link
+                    to="/login"
+                    className="block px-2 py-2 text-base hover:text-yellow-400 transition-colors"
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    to="/register"
+                    className="block px-2 py-2 text-base hover:text-yellow-400 transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Register
+                  </Link>
+                </>
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import AboutTimeline from '../components/AboutTimeline';
 import PremiumOfferings from "../components/PremiumOfferings";
 import FreshnessTimeline from '../components/FreshnessTimeline';
@@ -19,26 +19,24 @@ const AboutUs = () => {
         className="w-full bg-cover bg-center min-h-[110vh] flex flex-col items-center justify-center text-center px-6"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
-       
-        <div className="absolute inset-0 " />
-
-  
-          
-
-  
-             <div  className="bg-yellow-400 hover:bg-yellow-500 mt-175  text-black font-semibold px-15 py-4 rounded-full shadow-md transition">  Claim Your Trial Pack</div>
-
-          
-         
-      </div>
-       <AboutTimeline />
-        <PremiumOfferings />
-        <FreshnessTimeline />
+        <div className="absolute inset-0" />
         
-<SubscribeSave />
-
-<Footer /> 
+        <Link to="/trial-pack">
+          <motion.div 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-yellow-400 hover:bg-yellow-500 mt-175 text-black font-semibold px-15 py-4 rounded-full shadow-md transition cursor-pointer"
+          >
+            Claim Your Trial Pack
+          </motion.div>
+        </Link>
+      </div>
       
+      <AboutTimeline />
+      <PremiumOfferings />
+      <FreshnessTimeline />
+      <SubscribeSave />
+      <Footer /> 
     </div>
   );
 };
