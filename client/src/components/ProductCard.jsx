@@ -1,58 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const ProductCard = ({ product }) => {
-  const [isInCart, setIsInCart] = useState(false);
-  
-  // Check if product is in cart
-  useEffect(() => {
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    setIsInCart(cart.some(item => item._id === product._id));
-  }, [product._id]);
-  
-  // Add to cart function
-  const addToCart = () => {
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    const existingItem = cart.find(item => item._id === product._id);
-    
-    if (existingItem) {
-      existingItem.quantity += 1;
-    } else {
-      cart.push({
-        _id: product._id,
-        name: product.name,
-        price: product.price,
-        image: product.image,
-        quantity: 1
-      });
-    }
-    
-    localStorage.setItem('cart', JSON.stringify(cart));
-    setIsInCart(true);
-    
-    // Trigger update for navbar cart count
-    window.dispatchEvent(new Event('storage'));
-  };
-  
+const ProductCard = ({ product, addToCart }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="bg-white rounded-lg shadow overflow-hidden">
-      <img 
-        src={product.image || 'https://via.placeholder.com/300'} 
-        alt={product.name} 
-        className="w-full h-48 object-cover"
+    <div className="bg-yellow-100 border-2 border-yellow-300 rounded-3xl shadow-xl p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+      <img
+        src={product.image}
+        alt={product.name}
+        className="w-48 h-48 object-cover rounded-2xl mb-4 border-4 border-yellow-200 shadow-lg transition-all duration-300 hover:scale-110"
       />
-      
-      <div className="p-4">
-        <h3 className="font-medium text-gray-900">{product.name}</h3>
-        <p className="mt-1 text-sm text-gray-500">{product.description?.substring(0, 60)}...</p>
-        <div className="mt-2 flex items-center justify-between">
-          <span className="text-lg font-bold">${product.price.toFixed(2)}</span>
-        </div>
-        
-        <button 
-          onClick={addToCart}
-          className="mt-3 w-full bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-2 px-4 rounded"
+      <h2 className="text-2xl font-extrabold text-yellow-900 mb-2 tracking-wide">
+        {product.name}
+      </h2>
+      <p className="text-yellow-800 text-base mb-3 text-center">
+        {product.description}
+      </p>
+      <div className="flex justify-between items-center w-full mb-4">
+        <span className="text-xl font-bold text-yellow-700 bg-yellow-200 px-4 py-2 rounded-full shadow">
+          ₹{product.price}
+        </span>
+        <span className="text-yellow-500 text-lg font-semibold flex items-center gap-1">
+          ⭐ {product.rating}
+        </span>
+      </div>
+      <div className="flex gap-3 w-full">
+        <button
+          className="flex-1 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-3 rounded-xl transition-all duration-200 shadow-lg"
+          onClick={() => addToCart(product, 1)}
         >
-          {isInCart ? 'Add More' : 'Add to Cart'}
+          Add to Cart
+        </button>
+        <button
+          className="flex-1 bg-yellow-700 hover:bg-yellow-800 text-white font-bold py-3 rounded-xl transition-all duration-200 shadow-lg"
+          onClick={() => navigate("/checkout")}
+        >
+          Buy
         </button>
       </div>
     </div>

@@ -59,6 +59,8 @@ const Footer = () => {
               <Link to="/sustainability" className="text-gray-300 hover:text-yellow-400">Sustainability</Link>,
               <Link to="/careers" className="text-gray-300 hover:text-yellow-400">Careers</Link>,
               <Link to="/testimonials" className="text-gray-300 hover:text-yellow-400">Testimonials</Link>,
+                 <Link to="/milkfact" className="text-gray-300 hover:text-yellow-400">Milk fact</Link>,
+                  <Link to="/Subscription" className="text-gray-300 hover:text-yellow-400">Subscription Plan</Link>,
             ].map((item, i) => (
               <li
                 key={i}
@@ -81,6 +83,8 @@ const Footer = () => {
               <Link to="/return-policy" className="text-gray-300 hover:text-yellow-400">Return & Refund Policy</Link>,
               <Link to="/terms-conditions" className="text-gray-300 hover:text-yellow-400">Terms & Conditions</Link>,
               <Link to="/privacy-policy" className="text-gray-300 hover:text-yellow-400">Privacy Policy</Link>,
+                <Link to="/Gallery" className="text-gray-300 hover:text-yellow-400">Gallery</Link>,
+                 <Link to="/Our-farms" className="text-gray-300 hover:text-yellow-400">Our Farms</Link>,
             ].map((item, i) => (
               <li
                 key={i}

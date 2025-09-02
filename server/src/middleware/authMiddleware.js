@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
-export const protect = async (req, res, next) => {
+const protect = async (req, res, next) => {
   let token;
 
   // Check if token exists in headers
@@ -13,11 +13,12 @@ export const protect = async (req, res, next) => {
       // Verify token
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-      // Get user from token
+      // Get user from the token
       req.user = await User.findById(decoded.id).select('-password');
 
       next();
     } catch (error) {
+      console.error(error);
       res.status(401).json({ message: 'Not authorized, token failed' });
     }
   }
@@ -26,3 +27,14 @@ export const protect = async (req, res, next) => {
     res.status(401).json({ message: 'Not authorized, no token' });
   }
 };
+
+// Add admin middleware
+const admin = async (req, res, next) => {
+  if (req.user && req.user.isAdmin) {
+    next();
+  } else {
+    res.status(401).json({ message: 'Not authorized as an admin' });
+  }
+};
+
+export { protect, admin };

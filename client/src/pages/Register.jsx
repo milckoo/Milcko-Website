@@ -22,6 +22,12 @@ const Register = () => {
   const handleSubmit = async e => {
     e.preventDefault();
 
+    // Frontend validation for required fields
+    if (!form.name || !form.email || !form.username || !form.password || !form.confirmPassword) {
+      setError("All fields are required.");
+      return;
+    }
+
     if (form.password !== form.confirmPassword) {
       setError("Passwords don't match");
       return;
@@ -46,14 +52,16 @@ const Register = () => {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || 'Registration failed');
+        // Show backend error message if available
+        setError(data.message || 'Registration failed');
+        setLoading(false);
+        return;
       }
 
       // Registration successful
       login(data); // Save user in context/localStorage
       navigate('/dashboard');
     } catch (err) {
-      // Handle API errors
       setError(err.message || 'Registration failed, please try again');
     } finally {
       setLoading(false);

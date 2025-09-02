@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 const Testimonials = () => {
   const testimonials = [
@@ -64,6 +65,7 @@ const Testimonials = () => {
 
   return (
     <div className="bg-[#fefcf8] min-h-screen pt-24">
+      <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

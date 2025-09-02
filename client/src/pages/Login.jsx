@@ -35,8 +35,14 @@ const Login = () => {
       }
 
       // ✅ Login successful
-      login(data); // Save user in context & localStorage
-      navigate('/dashboard');
+      login(data);
+      const redirect = localStorage.getItem("redirectAfterLogin");
+      if (redirect) {
+        localStorage.removeItem("redirectAfterLogin");
+        navigate(redirect);
+      } else {
+        navigate('/dashboard');
+      }
     } catch (err) {
       setError(err.message || 'Login failed. Please try again.');
     } finally {

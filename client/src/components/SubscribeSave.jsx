@@ -4,12 +4,13 @@ import farmerImg from '../assets/images/discount.png';
 
 const SubscribeBanner = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '100px' });
 
   return (
     <div
       ref={ref}
-      className="relative w-full px-6 py-22 md:px-24 flex flex-col md:flex-row items-center justify-between gap-10 overflow-hidden"
+     className="relative w-full px-10 py-20 md:px-24 flex flex-col md:flex-row items-center justify-between gap-10 overflow-hidden"
+
       style={{ backgroundColor: '#F7B757', minHeight: '450px' }}
     >
       
