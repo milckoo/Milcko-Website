@@ -63,7 +63,7 @@ const Navbar = () => {
   return (
     <nav
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-        isHome && !isScrolled ? "" : "bg-gray-800 shadow-md"
+        isHome && !isScrolled ? "" : "bg-gray-600 shadow-md"
       }`}
     >
       <div className="max-w-8xl mx-auto flex items-center justify-between w-full h-20 px-4 sm:px-6 md:px-8">
