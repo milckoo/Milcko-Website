@@ -9,7 +9,7 @@ const generateToken = (id) => {
   });
 };
 
-// @desc    Register user
+// @desc    Register user asd
 // @route   POST /api/auth/register
 // @access  Public
 export const register = async (req, res) => {
