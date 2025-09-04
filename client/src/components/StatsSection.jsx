@@ -75,7 +75,7 @@ const StatsSection = () => {
   return (
     <section
       ref={ref}
-      className="relative bg-[#fefcf8] py-0 px-6 d:px-12 lg:px-24 overflow-hidden"
+      className="relative  bg-[#FFFBF3] py-0 px-6 d:px-12 lg:px-24 overflow-hidden"
     >
       
       <div className="absolute inset-x-0 bottom-19 w-full z-0 pointer-events-none">
@@ -92,7 +92,7 @@ const StatsSection = () => {
       </div>
 
   
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
+      <div className="relative ml-5 mt-10  z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
         
         <motion.div
           className="w-full lg:w-[40%] flex justify-center"
@@ -121,7 +121,7 @@ const StatsSection = () => {
             But here are a few stats that tell our story!
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid mb-7 grid-cols-1 sm:grid-cols-2 gap-6">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -134,7 +134,7 @@ const StatsSection = () => {
                 <div>{stat.icon}</div>
                 <div>
                   <AnimatedNumber value={stat.number} />
-                  <p className="text-gray-600 text-sm">{stat.label}</p>
+                  <p className="  text-gray-600 text-sm">{stat.label}</p>
                 </div>
               </motion.div>
             ))}

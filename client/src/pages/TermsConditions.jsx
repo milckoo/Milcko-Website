@@ -25,7 +25,7 @@ const TermsConditions = () => {
       </section>
 
       {/* Main Content Section */}
-      <section className="max-w-4xl mx-auto p-8 space-y-8">
+      <section className="max-w-4xl mx-auto p-8 space-y-8 bg-[#FFFBF3]">
         {/* Section 1: Service Usage */}
         <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Service Usage</h2>

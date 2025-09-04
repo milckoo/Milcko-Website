@@ -4,7 +4,7 @@ import ExperienceMilcko from '../components/ExperienceMilcko';
 import Footer from '../components/Footer';
 const OurProcess = () => {
   return (
-    <section className="w-full mt-30 bg-white py-0 px-0 sm:px-0 min-h-screen" id="our-process">
+    <section className="w-full mt-30bg-[#FFFBF3] py-0 px-0 sm:px-0 min-h-screen" id="our-process">
       <div className="max-w-6xl mx-auto text-center">
         
         {/* Heading + Subheading */}

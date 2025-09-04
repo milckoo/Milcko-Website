@@ -47,7 +47,7 @@ const ArticleTag = ({ text }) => (
 
 function PopularArticles() {
   return (
-    <section className="bg-[#FCFAF7] font-sans py-20 sm:py-24">
+    <section className="bg-[#FEFBF1]  font-sans py-20 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* --- Section Header --- */}

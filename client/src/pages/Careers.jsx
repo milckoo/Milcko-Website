@@ -1,24 +1,31 @@
 import React from "react";
 import { motion } from "framer-motion";
 import careersImage from "../assets/images/careers.png";
-import waveImage from "../assets/images/wave.png";
-import PurposeCards from "../components/PurposeCards"; // Fixed path
-import RoleCarousel from "../components/RoleCarousel"; // Not from pages folder
-import LifeAtMilcko from "../components/LifeAtMilcko"; // Fixed path
-import WelcomeBanner from "../components/WelcomeBanner"; // Fixed path
-import Footer from '../components/Footer';
+import PurposeCards from "../components/PurposeCards";
+import RoleCarousel from "../components/RoleCarousel";
+import LifeAtMilcko from "../components/LifeAtMilcko";
+import WelcomeBanner from "../components/WelcomeBanner";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import topwave from "../assets/images/topwave.png";
+import bottomw from "../assets/images/bottomw.png";
 
 const CareersSection = () => {
   return (
     <>
-      <section className="relative mt-18  bg-[#f9c978] overflow-hidden">
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="relative pt-30 bg-[#FFFBF3] overflow-hidden">
+        {/* Top wave */}
         <img
-          src={waveImage}
+          src={topwave}
           alt="Top Wave"
-          className="absolute top-0 left-0 w-full z-0"
+          className="absolute top-0 left-0 w-full h-32 object-cover z-0"
         />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-0 py-30 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-20">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 py-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-20">
+          {/* Left: Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -32,6 +39,7 @@ const CareersSection = () => {
             />
           </motion.div>
 
+          {/* Right: Text */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -58,14 +66,16 @@ const CareersSection = () => {
           </motion.div>
         </div>
 
+        {/* Bottom wave */}
         <img
-          src={waveImage}
+          src={bottomw}
           alt="Bottom Wave"
-          className="absolute bottom-0 left-0 w-full z-0 rotate-180"
+          className="absolute bottom-0 left-0 w-full z-0"
         />
       </section>
 
-      <div className="bg-[#fff9ef] py-0 px-0">
+      {/* Sub-sections */}
+      <div className="bg-[#fff9ef]">
         <PurposeCards />
         <RoleCarousel />
         <LifeAtMilcko />

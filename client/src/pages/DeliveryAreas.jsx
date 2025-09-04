@@ -43,7 +43,7 @@ const DeliveryAreas = () => {
   };
 
   return (
-    <div className="bg-[#FFFBF0] min-h-screen font-sans overflow-hidden relative antialiased pt-24">
+    <div className="bg-[#FFFBF3] min-h-screen font-sans overflow-hidden relative antialiased pt-24">
       <Navbar />
       {/* Hero Section */}
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

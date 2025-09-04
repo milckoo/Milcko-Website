@@ -14,7 +14,7 @@ const AboutUs = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-[#fefcf8] min-h-screen flex flex-col justify-between">
+    <div className="bg-[#FFFBF3] min-h-screen flex flex-col justify-between">
       <Navbar />
       
       {/* Hero Section */}

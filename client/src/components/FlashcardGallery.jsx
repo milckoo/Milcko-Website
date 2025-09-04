@@ -21,7 +21,7 @@ const leftSliderImages = [imgManya, imgSameer, imgMansi];
 const rightSliderImages = [imgAmit, imgRajesh, imgSuresh];
 
 const FlashcardGallery = () => (
-  <section className="relative py-20 bg-[#fefcf8] mt-20 overflow-hidden px-4">
+  <section className="relative py-20 bg-[#FFFBF3] mt-20 overflow-hidden px-4">
     {/* Background Image */}
     <div className="absolute inset-0 w-full mt-10 h-full z-0 opacity-10 pointer-events-none">
       <img

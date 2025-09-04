@@ -5,7 +5,7 @@ import pic14 from "../assets/images/pic14.PNG";
 
 const FreshReadsSection = () => {
   return (
-    <section className="bg-white py-16 px-4 md:px-8">
+    <section className="bg-[#FEFBF1] py-16 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header and See More Button */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">

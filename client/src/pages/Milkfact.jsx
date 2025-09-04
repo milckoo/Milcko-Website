@@ -10,90 +10,32 @@ const Milkfact = () => {
   return (
     <>
       <Navbar />
+
       {/* Milk Fact Section */}
-      <section
-        style={{
-          padding: "10rem 2rem",
-          backgroundColor: "#f9f9f9",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            gap: "2rem",
-            flexWrap: "wrap-reverse",
-            justifyContent: "center",
-            maxWidth: "1200px",
-            width: "100%",
-          }}
-        >
+      <section className="px-4 py-45 bg-[#FFFBF3] flex justify-center items-center">
+        <div className="flex flex-col md:flex-row-reverse gap-8 md:gap-12 max-w-6xl w-full items-center">
           {/* Left Column - Photo */}
-          <div
-            style={{
-              flex: "1",
-              minWidth: "600px", // ✅ Bigger width
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <div
-              style={{
-                width: "100%",
-                height: "450px", // ✅ Bigger height
-                borderRadius: "12px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                overflow: "hidden",
-                backgroundColor: "#fff",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-              }}
-            >
+          <div className="flex-1 w-full flex justify-center items-center">
+            <div className="w-full max-w-lg h-[250px] sm:h-[350px] md:h-[450px] rounded-xl overflow-hidden bg-white shadow-md flex justify-center items-center">
               {milkfact ? (
                 <img
                   src={milkfact}
                   alt="Milk Fact"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "contain", // ✅ Image fully visible
-                  }}
+                  className="w-full h-full object-contain"
                 />
               ) : (
-                <span style={{ color: "#888", fontSize: "1rem" }}>
-                  Photo Placeholder
-                </span>
+                <span className="text-gray-500 text-sm">Photo Placeholder</span>
               )}
             </div>
           </div>
 
           {/* Right Column - Text */}
-          <div
-            style={{
-              flex: "1",
-              minWidth: "300px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "2.5rem",
-                fontWeight: "bold",
-                marginBottom: "1rem",
-                color: "#333",
-              }}
-            >
+          <div className="flex-1 w-full flex flex-col justify-center text-center md:text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               Your Daily Dose of Dairy{" "}
-              <span style={{ color: "#d99200" }}>Wisdom.</span>
+              <span className="text-[#d99200]">Wisdom.</span>
             </h2>
-            <p style={{ fontSize: "1rem", lineHeight: "1.6", color: "#555" }}>
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
               Discover how milk fuels health, culture, and communities. Read
               insightful blogs on nutrition, farmer stories, eco-friendly
               practices, and the journey of purity in every bottle.
@@ -102,11 +44,10 @@ const Milkfact = () => {
         </div>
       </section>
 
-      {/* Fresh Reads Section (Placed Correctly Below) */}
-     
+      {/* Fresh Reads Section */}
       <FreshReadsSection />
-       <PopularArticles/>
-       <NewsletterSignup/>
+      <PopularArticles />
+      <NewsletterSignup />
       <Footer />
     </>
   );

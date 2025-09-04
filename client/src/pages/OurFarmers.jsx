@@ -43,7 +43,7 @@ const OurFarmers = () => {
   return (
     <section
       id="our-farmers"
-      className="w-full min-h-screen bg-cover bg-center bg-no-repeat py-0 px-0"
+      className="w-full min-h-screen bg-cover bg-[#FFFBF3] bg-center bg-no-repeat py-0 px-0"
       style={{ backgroundImage: `url(${greenbg})` }}
     >
       <div className="max-w-7xl mt-20 mx-auto flex flex-col md:flex-row items-center justify-between gap-12">

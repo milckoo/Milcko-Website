@@ -79,7 +79,7 @@ function Subscription() {
     <>
     <div className='mb-15'><Navbar/></div>
       {/* Subscription Plans Section */}
-      <section className="relative bg-gray-900 font-sans py-20 sm:py-24">
+      <section className="relative bg-gray-900  font-sans py-20 sm:py-24">
         {/* Background Image with Overlay */}
         <img
           src={pic8}

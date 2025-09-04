@@ -11,7 +11,7 @@ const SustainabilitySection = () => {
     <>
       {/* Sustainability Banner Section */}
       <section
-        className="relative w-full h-250   mt-18 bg-cover bg-center flex items-center justify-center"
+        className="relative w-full h-250 bg-[#FFFBF3]  mt-18 bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage: `url(${sustainabilityImage})`,
         }}

@@ -95,7 +95,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 min-h-screen py-16 px-4 sm:px-6 lg:px-8 font-sans antialiased text-gray-900 dark:text-white">
+    <div className="bg-[#FFFBF3] dark:bg-gray-900 min-h-screen py-16 px-4 sm:px-6 lg:px-8 font-sans antialiased text-gray-900 dark:text-white">
       <motion.div
         className="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-8 sm:p-10 rounded-3xl shadow-xl border border-gray-200 dark:border-gray-700"
         variants={containerVariants}

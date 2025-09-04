@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 const PrivacyPolicy = () => {
   return (
     <>
-    <div className="bg-white font-sans text-black max-w-5xl mx-auto p-4 md:p-8">
+    <div className="bg-[#FFFBF3] font-sans text-black max-w-5xl mx-auto p-4 md:p-8">
    <div className="mb-15">
        <Navbar/>
    </div>

@@ -66,7 +66,7 @@ const Products = () => {
 
   return (
 	<>
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#FFFBF3]">
       <Navbar />
       
       {/* Page Header */}
@@ -129,7 +129,7 @@ const Products = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-green-600 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <div className="bg-green-900 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Ready to Experience Freshness?

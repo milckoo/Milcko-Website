@@ -9,7 +9,7 @@ import Navbar from '../components/Navbar';
 const ReturnRefundPolicy = () => {
   return (
     <>
-    <section className=" bg-[#F6F4EB]  pt-45 py-16  px-4 md:px-8">
+    <section className=" bg-[#FFFBF3]  pt-45 py-16  px-4 md:px-8">
       <Navbar />
       <div className="max-w-7xl mx-auto flex bg-[#F6F4EB]  flex-col lg:flex-row items-center justify-between gap-12">
         {/* Left Section for Text Content */}

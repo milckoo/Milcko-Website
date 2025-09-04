@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 
 const UserDashboard = () => (
-  <div className="min-h-screen bg-gray-100">
+  <div className="min-h-screen bg-[#FFFBF3]">
     <Navbar />
     <div className="flex">
       <Sidebar />
